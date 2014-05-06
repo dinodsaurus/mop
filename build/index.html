@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>mop</title>    
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body ng-app="mop" ng-controller="MainCtrl">
+    <div class="left">
+        <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross" ng-click="showMenu()"></span>
+        <div class="bor"></div>
+        <ul class="nav" ng-show="navigation">
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Predavači</a></li>
+            <li><a href="#">Galerija</a></li>
+            <li><a href="#">Lokacija</a></li>
+            <li><a href="#">O nama</a></li>
+            <li><a href="#">Sponzori</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+        <h1>MOP 3<br/> festival multimedije<br/> 22.05 - 24.05.2014</h1>
+    </div>
+    <div class="right" ng-view="">
+
+    </div>
+
+
+    <script src="lib.js"></script>
+    <script src="templates.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
