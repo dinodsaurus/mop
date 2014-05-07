@@ -3,23 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>mop</title>    
+    <title>Mop festival multimedije</title>
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.typonine.com/WF-003562-001104.css" type="text/css" />
   </head>
   <body ng-app="mop" ng-controller="MainCtrl">
     <div class="left">
         <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross" ng-click="showMenu()"></span>
         <div class="bor"></div>
-        <ul class="nav" ng-show="navigation">
-            <li><a href="#">Program</a></li>
-            <li><a href="#">Predavači</a></li>
-            <li><a href="#">Galerija</a></li>
-            <li><a href="#">Lokacija</a></li>
-            <li><a href="#">O nama</a></li>
-            <li><a href="#">Sponzori</a></li>
-            <li><a href="#">Kontakt</a></li>
+        <ul class="nav" ng-show="showNav">
+            <li ng-repeat="item in navigation"  ng-click="select($index)">
+                <a href="{{item.path}}" ng-class="{active: $index == selected}">{{item.name}}</a>
+            </li>
         </ul>
         <h1>MOP 3<br/> festival multimedije<br/> 22.05 - 24.05.2014</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam atque consequuntur cumque, debitis deleniti, esse expedita facilis illum ipsam itaque laudantium nesciunt odio omnis perspiciatis! Assumenda dolore soluta vel!</p>
+        <ul class="social">
+            <li>
+                <a href="#">Twitter</a>
+            </li>
+            <li>
+                <a href="#">Facebook</a>
+            </li>
+            <li>
+                <a href="#">Instagram</a>
+            </li>
+        </ul>
     </div>
     <div class="right" ng-view="">
 

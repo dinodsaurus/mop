@@ -1,9 +1,35 @@
+@font-face {
+  font-family: 'maison_neuebook';
+  src: url('../fonts/maisonneue-book-webfont.eot');
+  src: url('../fonts/maisonneue-book-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/maisonneue-book-webfont.woff') format('woff'),
+  url('../fonts/maisonneue-book-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
 @import "reset.less";
+@import "lesshat.less";
 @black: #1a1a1a;
 @grey: #676767;
 @lightBlue: #03d1df;
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+a{
+  .transition(.3);
+  border:none;
+  color:black;
+  text-decoration:none;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+  font-family:"maison_neuebook";
+  overflow: hidden;
 }
 .left{
   padding:50px 0;
@@ -14,10 +40,11 @@
   height:100%;
   background:@black;
   color:white;
+  z-index:10;
   .nav{
     background:#2b2b2b;
     position: relative;
-    height: 100px;
+    height: 140px;
     -webkit-transition:height linear .3s;
     transition:height linear .3s;
     overflow: hidden;
@@ -25,8 +52,8 @@
     li{
       float:left;
       list-style: none;
-      margin-right:130px;
-      margin-bottom:30px;
+      width:22%;
+      padding-top:30px;
       a{
         color:@grey;
         text-decoration:none;
@@ -57,7 +84,59 @@
     font-size:30px;
     padding:0 50px;
     margin-top:50px;
+    font-family: "Audree Audree L1 2";
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
   }
+  p{
+    margin-top:50px;
+    font-size:20px;
+    padding:0 50px;
+  }
+  .social{
+    list-style: none;
+    padding:0 50px;
+    margin-top:50px;
+    a{
+      color:@grey;
+      text-decoration:none;
+    }
+    a:hover{
+      color:white;
+      border-bottom:1px solid @lightBlue;
+    }
+  }
+}
+.mainPage{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+.bck1{
+  background:url("../img/WEB-01.png") no-repeat;
+  background-position: center center;
+  .background-size(auto 85%);
+}
+.bck2{
+  background:url("../img/WEB-02.png") no-repeat;
+  background-position: center center;
+  .background-size(auto 85%);
+}
+.bck3{
+  background:url("../img/WEB-03.png") no-repeat;
+  background-position: center center;
+  .background-size(auto 85%);
+}
+.bck4{
+  background:url("../img/WEB-04.png") no-repeat;
+  background-position: center center;
+  .background-size(auto 85%);
+}
+.bck5{
+  background:url("../img/WEB-05.png") no-repeat;
+  background-position: center center;
+  .background-size(auto 85%);
 }
 .right{
   position:absolute;
@@ -65,4 +144,91 @@
   top:0;
   width:50%;
   height:100%;
+  a{
+    display:block;
+    float:left;
+  }
+  .predavaci{
+    padding:50px;
+    margin:0;
+    list-style:none;
+    height:100%;
+    overflow-y:scroll;
+    .profile{
+      position:relative;
+      width:47%;
+      margin-right:5%;
+      float:left;
+      .img{
+        position:relative;
+        .hover{
+          opacity:0;
+          position:absolute;
+          width: 100%;
+          height: 100%;
+          left:-10px;
+          top:-10px;
+          background:url("../img/gostiHover.png");
+          .background-size(cover);
+          .transition(.4);
+        }
+        img{
+          width:100%;
+          height: auto;
+        }
+      }
+      h2{
+        margin:20px 0 25px;
+        padding-right:20px;
+        font-size:20px;
+        background:url("../img/plus.png") no-repeat;
+        background-position:right top;
+      }
+    }
+    .profile:hover{
+      .img{
+        .hover{
+          opacity:1;
+        }
+      }
+    }
+    .profile:nth-child(even){
+      margin:0;
+    }
+  }
+}
+div[ng-view].ng-leave        {
+  -webkit-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  -moz-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+}
+div[ng-view].ng-enter 		{
+  -webkit-animation:slideInRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  -moz-animation:slideInRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  animation:slideInRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+  from 	{ transform:translateX(100%); }
+  to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+  from 	{ -moz-transform:translateX(100%); }
+  to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+  from 	{ -webkit-transform:translateX(100%); }
+  to 		{ -webkit-transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+  to 		{ transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {
+  to 		{ -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+  to 		{ -webkit-transform: translateX(-100%); }
 }

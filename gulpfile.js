@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var path = require('path');
 var ngmin = require('gulp-ngmin');
 var uglify = require('gulp-uglify');
+var image = require('gulp-image');
 
 gulp.task('scripts', function(){
     //combine all js files of the app
@@ -33,24 +34,41 @@ gulp.task('less', function () {
 gulp.task('vendorJS', function(){
     //concatenate vendor JS files
     gulp.src([
-        './bower_components/**/*.js'])
+        './bower_components/angular/angular.min.js',
+        './bower_components/angular-animate/angular-animate.min.js',
+        './bower_components/angular-route/angular-route.min.js',
+        './bower_components/vendor/*.js'])
         .pipe(plugins.concat('lib.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./build'));
 });
 
 gulp.task('vendorCSS', function(){
-    //concatenate vendor CSS files
     gulp.src(['!./bower_components/**/*.min.css',
         './bower_components/**/*.css'])
         .pipe(plugins.concat('lib.css'))
         .pipe(gulp.dest('./build'));
 });
 
-gulp.task('copy-index', function() {
-    gulp.src('./app/index.html')    
-        .pipe(gulp.dest('./build'));
+gulp.task('image', function () {
+    gulp.src('./app/img/*')
+        .pipe(image())
+        .pipe(gulp.dest('./build/img'));
 });
+
+gulp.task('copy', function() {
+    gulp.src(['./app/index.html'])
+        .pipe(gulp.dest('./build'));
+
+    gulp.src(['./app/fonts/*'])
+        .pipe(gulp.dest('./build/fonts'));
+
+    gulp.src(['./app/svg/*'])
+        .pipe(gulp.dest('./build/svg'));
+
+});
+
+
 
 gulp.task('watch',function(){
     gulp.watch([
@@ -61,10 +79,10 @@ gulp.task('watch',function(){
         return gulp.src(event.path)
             .pipe(plugins.connect.reload());
     });
-    gulp.watch(['./app/**/*.js','!./app/**/*test.js'],['scripts']);
+    gulp.watch(['./app/**/*.js'],['scripts']);
     gulp.watch(['!./app/index.html','./app/**/*.html'],['templates']);
     gulp.watch('./app/**/*.less',['less']);
-    gulp.watch('./app/index.html',['copy-index']);
+    gulp.watch('./app/index.html',['copy']);
 
 });
 
@@ -74,4 +92,4 @@ gulp.task('connect', plugins.connect.server({
     livereload: true
 }));
 
-gulp.task('default',['connect','scripts','templates','less','copy-index','vendorJS','vendorCSS','watch']);
+gulp.task('default',['connect','scripts','templates','less','copy','vendorJS','vendorCSS','watch','image']);
