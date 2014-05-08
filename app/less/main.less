@@ -197,6 +197,71 @@ body{
     }
   }
 }
+.gostSingle{
+  position:absolute;
+  height:100%;
+  overflow-y:scroll;
+  .bck{
+    display:block;
+    width: 100px;
+    height:100px;
+    background:@lightBlue;
+  }
+  .img{
+    img{
+      width: 100%;
+    }
+  }
+  .small{
+    font-size:12px;
+    color:@grey;
+    text-transform:uppercase;
+    margin-bottom:10px;
+    margin-top:20px;
+  }
+  .gost{
+    padding:0 50px 40px;
+    h2{
+      margin:50px 0 0;
+      font-size:20px;
+      padding-bottom:20px;
+      border-bottom:2px solid @lightBlue;
+    }
+    a{
+      float:left;
+      display:block;
+      width:100%;
+      font-size:14px;
+    }
+  }
+  .pred{
+    padding:20px 50px 50px;
+    background:@black;
+    color:white;
+    h2{
+      font-size:20px;
+      color:@lightBlue;
+    }
+    .date{
+      display:block;
+      width:100%;
+      border-bottom:2px solid @lightBlue;
+      padding-bottom:20px;
+      margin-bottom:20px;
+    }
+  }
+}
+
+div[ng-view].gostAct.ng-enter{
+  -webkit-animation:slideInLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  -moz-animation:slideInLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  animation:slideInLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+}
+div[ng-view].gost.ng-leave{
+  -webkit-animation:slideOutRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  -moz-animation:slideOutRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+  animation:slideOutRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+}
 div[ng-view].ng-leave        {
   -webkit-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
   -moz-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
@@ -220,6 +285,32 @@ div[ng-view].ng-enter 		{
 @-webkit-keyframes slideInRight {
   from 	{ -webkit-transform:translateX(100%); }
   to 		{ -webkit-transform: translateX(0); }
+}
+/* slide in from the right */
+@keyframes slideInLeft {
+  from 	{ transform:translateX(-100%); }
+  to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInLeft {
+  from 	{ -moz-transform:translateX(-100%); }
+  to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInLeft {
+  from 	{ -webkit-transform:translateX(-100%); }
+  to 		{ -webkit-transform: translateX(0); }
+}
+/* slide in from the right */
+@keyframes slideOutRight {
+  from 	{ transform:translateX(0); }
+  to 		{ transform: translateX(100%); }
+}
+@-moz-keyframes slideOutRight {
+  from 	{ -moz-transform:translateX(0); }
+  to 		{ -moz-transform: translateX(100%); }
+}
+@-webkit-keyframes slideOutRight {
+  from 	{ -webkit-transform:translateX(0); }
+  to 		{ -webkit-transform: translateX(100%); }
 }
 
 /* slide in from the bottom */

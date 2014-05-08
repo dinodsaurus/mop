@@ -35,7 +35,7 @@ gulp.task('vendorJS', function(){
     //concatenate vendor JS files
     gulp.src([
         './bower_components/angular/angular.min.js',
-        './bower_components/angular-animate/angular-animate.min.js',
+        './bower_components/angular-animate/angular-animate.js',
         './bower_components/angular-route/angular-route.min.js',
         './bower_components/vendor/*.js'])
         .pipe(plugins.concat('lib.js'))

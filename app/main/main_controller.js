@@ -3,13 +3,17 @@
 angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/naslovna', {
         templateUrl: 'main/main.html',
         controller: 'RootCtrl'
       })
-      .when('/predavaci', {
+      .when('/gosti', {
         templateUrl: 'predavaci/predavaci.html',
         controller: 'PredavaciCtrl'
+      })
+      .when('/gosti/:id/', {
+        templateUrl:'predavaci/gost.html',
+        controller: 'PredavacCtrl'
       })
       .when('/program', {
         templateUrl: 'program/program.html',
@@ -26,7 +30,7 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
     $scope.selected = 0;
     $scope.navigation = [
         {
-            path: "/",
+            path: "#/naslovna",
             name: "Naslovna"
         },
         {
@@ -34,8 +38,8 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
             name: "Program"
         },
         {
-            path: "#/predavaci",
-            name: "Predavači"
+            path: "#/gosti",
+            name: "Gosti"
         },
         {
             path: "#/galerija",

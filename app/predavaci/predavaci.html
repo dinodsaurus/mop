@@ -1,0 +1,11 @@
+<ul class="predavaci group">
+    <li class="profile" ng-repeat="gost in gosti">
+        <a href="#/gosti/{{gost.id}}" class="">
+        <div class="img">
+            <div class="hover"></div>
+            <img ng-src="{{gost.img}}" alt=""/>
+        </div>
+        <h2>{{gost.ime}}</h2>
+        </a>
+    </li>
+</ul>
