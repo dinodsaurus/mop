@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
+angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','mop-galerija','mop-lokacija','mop-kontakt'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/naslovna', {
@@ -18,14 +18,31 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
       .when('/program', {
         templateUrl: 'program/program.html',
         controller: 'ProgramCtrl'
+      })
+      .when('/program/:id/', {
+        templateUrl:'program/programSing.html',
+        controller: 'ProgramSingle'
+      })
+      .when('/galerija', {
+        templateUrl:'galerija/galerija.html',
+        controller: 'GalerijaCtrl'
+      })
+      .when('/lokacija', {
+        templateUrl:'lokacija/lokacija.html',
+        controller: 'LokacijaCtrl'
+      })
+      .when('/kontakt', {
+        templateUrl:'kontakt/kontakt.html',
+      })
+      .when('/onama', {
+        templateUrl:'onama/onama.html',
       });
   })
-  .controller('RootCtrl', function ($scope, $log) {
+  .controller('RootCtrl', function ($scope) {
         var rand = Math.floor(Math.random()*5 + 1);
-        $log.info(rand);
         $scope.class = "bck" + rand;
   })
-  .controller('MainCtrl', function ($scope, $log) {
+  .controller('MainCtrl', function ($scope) {
     $scope.showNav = false;
     $scope.selected = 0;
     $scope.navigation = [
@@ -50,7 +67,7 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
             name: "O nama"
         },
         {
-            path: "#/lokacja",
+            path: "#/lokacija",
             name: "Lokacija"
         },
         {
@@ -68,4 +85,15 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program'])
     $scope.showMenu = function(){
         $scope.showNav = !$scope.showNav;
     }
-  });
+    })
+    .directive('click', function ($timeout) {
+        return {
+            restrict: 'A',
+            link: function (scope, element) {
+                $timeout(function(){
+                    element[0].click();
+                },1);
+
+            }
+    }
+});

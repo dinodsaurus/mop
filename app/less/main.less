@@ -96,8 +96,10 @@ body{
   }
   .social{
     list-style: none;
-    padding:0 50px;
-    margin-top:50px;
+    padding:0;
+    position:absolute;
+    bottom:25px;
+    left:50px;
     a{
       color:@grey;
       text-decoration:none;
@@ -202,12 +204,36 @@ body{
   height:100%;
   overflow-y:scroll;
   .bck{
+    position:relative;
     display:block;
     width: 100px;
     height:100px;
     background:@lightBlue;
+    .img{
+      width:100%;
+      height:100%;
+      background: url("../img/bck.png") no-repeat;
+      background-position:center center;
+    }
+  }
+  .sep{
+    float:left;
+    width:100%;
+    height:1px;
   }
   .img{
+    margin-top:-1px;
+    float:left;
+    position:relative;
+    width:100%;
+    .imgFor{
+     position:absolute;
+      width:100%;
+      height:100%;
+      background:url("../img/predavaci.png") no-repeat;
+      background-position: center center;
+      .background-size(auto 80%);
+    }
     img{
       width: 100%;
     }
@@ -220,6 +246,8 @@ body{
     margin-top:20px;
   }
   .gost{
+    float:left;
+    width:100%;
     padding:0 50px 40px;
     h2{
       margin:50px 0 0;
@@ -235,6 +263,8 @@ body{
     }
   }
   .pred{
+    float:left;
+    width:100%;
     padding:20px 50px 50px;
     background:@black;
     color:white;
@@ -251,16 +281,198 @@ body{
     }
   }
 }
-
-div[ng-view].gostAct.ng-enter{
-  -webkit-animation:slideInLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
-  -moz-animation:slideInLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
-  animation:slideInLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+.program{
+  position:absolute;
+  height:100%;
+  width:100%;
+  a:nth-child(1){
+    background:#e4e4e4;
+  }
+  a:nth-child(2){
+    background:#ececec;
+  }
+  a:nth-child(3){
+    background:#f5f5f5;
+  }
+  a{
+    width:100%;
+    position:relative;
+    height:33%;
+  }
+  ul{
+    position:relative;
+    list-style:none;
+    height:100%;
+    li{
+      padding-top:20%;
+      padding-left:50px;
+      position:relative;
+      height:33%;
+      float:left;
+      width:100%;
+      .sep{
+        width:100%;
+        height:1px;
+        float:left;
+      }
+      p{
+        text-transform:uppercase;
+      }
+      h3{
+        float:left;
+        font-size:30px;
+        padding-bottom:5px;
+        border-bottom:2px solid @lightBlue;
+      }
+    }
+  }
 }
-div[ng-view].gost.ng-leave{
-  -webkit-animation:slideOutRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
-  -moz-animation:slideOutRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
-  animation:slideOutRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
+.progSing{
+  background:#2b2b2b;
+  color:white;
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow-y: scroll;
+  .bck{
+    position:relative;
+    display:block;
+    width: 100px;
+    height:100px;
+    background:@lightBlue;
+    padding:0;
+    .img{
+      width:100%;
+      height:100%;
+      background: url("../img/bck.png") no-repeat;
+      background-position:center center;
+      cursor:pointer;
+    }
+  }
+  ul{
+    padding:0 50px;
+  }
+  a{
+    display:block;
+    float:left;
+    width:100%;
+    color:white;
+    border-bottom:2px solid @lightBlue;
+    padding:20px 0;
+    li{
+      list-style:none;
+      p{
+        text-transform:uppercase;
+        color:@grey;
+        padding-bottom:5px;
+      }
+      h2{
+        color:@lightBlue;
+        font-size:24px;
+      }
+    }
+  }
+}
+.gallery{
+  position:absolute;
+  height:100%;
+  overflow-y: scroll;
+  padding:50px;
+  li{
+    position:relative;
+    width:33%;
+    float:left;
+    list-style:none;
+    margin-top:-4%;
+    img{
+      width:100%;
+    }
+  }
+}
+.lokacija{
+  position:absoluet;
+  width:100%;
+  height:100%;
+  overflow-y:scroll;
+  .mapa{
+    width:100%;
+    height:70%;
+  }
+  .lokacije{
+    background:@black;
+    ul{
+      padding:0 50px 50px;
+    }
+    a{
+      display:block;
+      float:left;
+      width:100%;
+      color:white;
+      border-bottom:2px solid @lightBlue;
+      padding:20px 0;
+      li{
+        list-style:none;
+        p{
+          text-transform:uppercase;
+          color:@grey;
+          padding-bottom:5px;
+        }
+        h2{
+          color:@lightBlue;
+          font-size:24px;
+        }
+      }
+    }
+  }
+}
+.kontakt{
+  position:absolute;
+  height:100%;
+  width: 100%;
+  overflow-y:scroll;
+  padding-bottom:50px;
+  img{
+    width:100%;
+  }
+  h2{
+    font-size:30px;
+    margin:50px 50px 0 50px;
+    border-bottom: 2px solid @lightBlue;
+  }
+  p{
+    padding:0 50px;
+
+  }
+  .small{
+    margin-top:50px;
+    font-size:12px;
+    color:#676767;
+  }
+}
+.onama{
+  position:absolute;
+  height:100%;
+  width: 100%;
+  overflow-y:scroll;
+  padding-bottom:50px;
+  img{
+    width:100%;
+  }
+  h2{
+    font-size:30px;
+    margin:50px 50px 0 50px;
+    border-bottom: 2px solid @lightBlue;
+  }
+  p{
+    padding:0 50px;
+    margin:20px 0;
+  }
+  .small{
+    margin-top:50px;
+    margin-bottom:0;
+    font-size:12px;
+    color:#676767;
+  }
 }
 div[ng-view].ng-leave        {
   -webkit-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);

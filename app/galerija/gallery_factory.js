@@ -4,19 +4,23 @@ https://api.instagram.com/v1/tags/imputmop/media/recent
 angular.module('mop-galerija')
     .factory("galerijaFac", function ($http,$q) {
         var instagram = function(tag){
-            var deferred = $q.defer();
-            var tag = tag;
-            if(!tag){
-                tag = "jourek";
-            }
-            $http({method: 'GET', url: 'https://api.instagram.com/v1/tags/' + tag + '/media/recent' + APIKEY}).
-                success(function(data) {
-                    deferred.resolve(data);
-                }).
-                error(function(data) {
-                    deferred.reject(data);
-                });
-            return deferred.promise;
+            return {
+                'get': function() {
+                    var base = "https://api.instagram.com/v1";
+                    var request = '/tags/' + tag + '/media/recent';
+                    var clientId = '036e1503210046a59931ed2cbcf2924d';
+
+                    var url = base + request;
+                    var config = {
+                        'params': {
+                            'client_id': clientId,
+                            'count': 30,
+                            'callback': 'JSON_CALLBACK'
+                        }
+                    };
+                    return $http.jsonp(url, config);
+                }
+            };
         }
 
         return {

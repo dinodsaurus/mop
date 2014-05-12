@@ -9,7 +9,7 @@
   </head>
   <body ng-app="mop" ng-controller="MainCtrl">
     <div class="left">
-        <span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross" ng-click="showMenu()"></span>
+        <span click class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross" ng-click="showMenu()"></span>
         <div class="bor"></div>
         <ul class="nav" ng-show="showNav">
             <li ng-repeat="item in navigation"  ng-click="select($index)">
@@ -30,11 +30,11 @@
             </li>
         </ul>
     </div>
-    <div class="right {{ pageClass }}" ng-view="">
+    <div class="right {{ pageClass }} group" ng-view="">
 
     </div>
 
-
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script src="lib.js"></script>
     <script src="templates.js"></script>
     <script src="app.js"></script>

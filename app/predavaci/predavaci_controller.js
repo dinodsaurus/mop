@@ -1,18 +1,19 @@
 'use strict';
 
 angular.module('mop-predavaci',[])
-    .controller('PredavaciCtrl', function ($scope, $log, predavaciFac, $timeout) {
+    .controller('PredavaciCtrl', function ($scope, predavaciFac ) {
         $scope.gosti = predavaciFac.gosti;
-        if(predavaciFac.gost){
-            $scope.pageClass = 'gostAct';
-            predavaciFac.gost = false;
-            $timeout(function(){
-                $scope.pageClass = '';
-            },1000);
-        }
     })
-    .controller('PredavacCtrl', function ($scope, $log, predavaciFac, $timeout) {
+    .controller('PredavacCtrl', function ($scope, predavaciFac, $routeParams, $window) {
         $scope.pageClass = 'gost';
-        predavaciFac.gost = true;
-        $scope.gosti = predavaciFac.gosti;
+        var id = parseInt($routeParams.id, 10);
+        var gosti = predavaciFac.gosti;
+        for(var i = 0; i < gosti.length; i++){
+            if( id === gosti[i].id){
+                $scope.gost = gosti[i];
+            }
+        }
+        $scope.bck = function(){
+            $window.history.back()
+        }
     });

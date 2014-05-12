@@ -2,7 +2,8 @@
 
 angular.module('mop-galerija',[])
     .controller('GalerijaCtrl', function ($scope, $log, galerijaFac) {
-        galerijaFac.instagram("imputmop").then(function(){
-
-        });
+        var insta = galerijaFac.instagram("imputmop");
+        insta.get().then(function(data){
+            $scope.images = data.data;
+        })
     });
