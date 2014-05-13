@@ -32,10 +32,13 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
         controller: 'LokacijaCtrl'
       })
       .when('/kontakt', {
-        templateUrl:'kontakt/kontakt.html',
+        templateUrl:'kontakt/kontakt.html'
       })
       .when('/onama', {
-        templateUrl:'onama/onama.html',
+        templateUrl:'onama/onama.html'
+      })
+      .when('/partneri', {
+        templateUrl:'partneri/partneri.html'
       });
   })
   .controller('RootCtrl', function ($scope) {
@@ -92,7 +95,7 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
             link: function (scope, element) {
                 $timeout(function(){
                     element[0].click();
-                },1);
+                },200);
 
             }
     }

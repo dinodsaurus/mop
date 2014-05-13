@@ -1,7 +1,13 @@
 <div class="gallery">
     <ul>
         <li ng-repeat="img in images.data"><a href="{{img.link}}" target="_blank">
-            <img ng-src="{{img.images.low_resolution.url}}" alt=""/></a>
+            <div class="img">
+                <div class="hover">
+                    <h2>@{{img.user.username}}</h2>
+                </div>
+                <img ng-src="{{img.images.low_resolution.url}}" alt=""/>
+            </div>
+            </a>
         </li>
     </ul>
 </div>

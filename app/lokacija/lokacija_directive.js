@@ -28,22 +28,26 @@ angular.module('mop-lokacija')
             var markers = [];
             markers.push(new google.maps.Marker({
                 map: map,
-                position: new google.maps.LatLng(46.3078, 16.336)
+                position: new google.maps.LatLng(46.3078, 16.336),
+                icon: "/img/pointer.png"
                 })
             );
             markers.push(new google.maps.Marker({
                     map: map,
-                    position: new google.maps.LatLng(46.3056, 16.3378)
+                    position: new google.maps.LatLng(46.3056, 16.3378),
+                    icon: "/img/pointer.png"
                 })
             );
             markers.push(new google.maps.Marker({
                     map: map,
-                    position: new google.maps.LatLng(46.3097, 16.3341)
+                    position: new google.maps.LatLng(46.3097, 16.3341),
+                    icon: "/img/pointer.png"
                 })
             );
             markers.push(new google.maps.Marker({
                     map: map,
-                    position: new google.maps.LatLng(46.306, 16.3462)
+                    position: new google.maps.LatLng(46.306, 16.3462),
+                    icon: "/img/pointer.png"
                 })
             );
 

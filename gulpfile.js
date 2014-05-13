@@ -52,16 +52,13 @@ gulp.task('vendorCSS', function(){
 
 gulp.task('image', function () {
     gulp.src('./app/img/*')
-        //.pipe(image())
+        .pipe(image())
         .pipe(gulp.dest('./build/img'));
 });
 
 gulp.task('copy', function() {
     gulp.src(['./app/index.html'])
         .pipe(gulp.dest('./build'));
-
-    gulp.src(['./app/fonts/*'])
-        .pipe(gulp.dest('./build/fonts'));
 
     gulp.src(['./app/svg/*'])
         .pipe(gulp.dest('./build/svg'));

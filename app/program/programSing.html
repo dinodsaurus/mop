@@ -1,12 +1,14 @@
 <div class="progSing group">
-    <a class="bck" href="#/program">
-        <div class="img"></div>
-    </a>
+    <div class="fullWidth">
+        <a class="bck" href="#/program">
+            <div class="img"></div>
+        </a>
+    </div>
     <ul>
         <a href="{{prog.link}}" ng-repeat="prog in program.prog"><li>
             <p>{{prog.type}}</p>
             <h2>{{prog.ime}}</h2>
-            <h3>{{prog.author}} | {{prog.time}}</h3>
+            <h3>{{prog.author}} <span>|</span> {{prog.time}}</h3>
         </li></a>
     </ul>
 </div>

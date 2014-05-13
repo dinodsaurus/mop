@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('mop-program',[])
-    .controller('ProgramCtrl', function ($scope) {
-
+    .controller('ProgramCtrl', function ($scope, $location) {
+        $scope.goTo = function(link){
+            $location.path( link );
+        }
     })
     .controller('ProgramSingle', function ($scope, $routeParams, programFac) {
         var id = $routeParams.id,

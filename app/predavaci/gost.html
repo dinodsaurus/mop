@@ -14,7 +14,7 @@
         <p class="small" ng-if="gost.links.length">Poveznice</p>
         <a href="http://{{link}}" ng-repeat="link in gost.links" target="_blank">{{link}}</a>
     </div>
-    <div class="pred">
+    <div class="pred" ng-if="gost.predavanje">
         <p class="small">{{gost.predavanje.type}}</p>
         <h2>{{gost.predavanje.naslov}}</h2>
         <p class="date">{{gost.predavanje.datum}}</p>
