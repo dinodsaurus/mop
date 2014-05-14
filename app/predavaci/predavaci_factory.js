@@ -320,7 +320,7 @@ angular.module('mop-predavaci')
                 ime: "BADco",
                 img: "img/badco_slika_1.png",
                 bigImg: "img/badco_slike_2.png",
-                bio: "Već na Akademiji likovnih umjetnosti kist je zamjenio digitalnim alatima. Nagrađivane autorske projekte izlaže na relevantnim skupnim izložbama i ponekoj samostalnoj. Kao grafički dizajner niz godina surađuje na raznovrsnim kulturnim, komercijalnim i samoinicranim projektima unutar tandema Imaginarij. Suosnivač je web studija Broj 42 u kojem trenutno djeluje."
+                bio: "BADco. je kolaborativna izvedbena skupina koja radi u Zagrebu. Jezgru skupine čine: Ivana Ivković, Ana Kreitmeyer, Tomislav Medak, Goran Sergej Pristaš, Nikolina Pristaš, Lovro Rumiha i Zrinka Užbinec. Od svog osnutka u 2000. godini, BADco. se kroz suradnju troje koreografa/plesača, dvoje dramaturga i jednog filozofa, uz producenta skupine, sistematično bavi istraživanjem protokola izvođenja, predstavljanja i gledanja strukturirajući svoje projekte unutar različitih formalnih i percepcijskih odnosa i sklopova. Rekonfiguracija etabliranih odnosa izvedbe i publike, propitkivanje perspektivnih datosti i arhitektonike izvedbe, problematizacija komunikacijskih struktura – sve to čini BADco. međunarodno relevantnim umjetničkim fenomenom i jedinstvenim izvedbenim doživljajem."
                 ,links: ["badco.hr/works/whatever-toolbox/","vimeo.com/17989853"],
                 predavanje: {
                     type: "Instalacija",

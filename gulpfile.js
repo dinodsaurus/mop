@@ -52,7 +52,7 @@ gulp.task('vendorCSS', function(){
 
 gulp.task('image', function () {
     gulp.src('./app/img/*')
-        .pipe(image())
+        //.pipe(image())
         .pipe(gulp.dest('./build/img'));
 });
 

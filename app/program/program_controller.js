@@ -2,11 +2,13 @@
 
 angular.module('mop-program',[])
     .controller('ProgramCtrl', function ($scope, $location) {
+        $scope.select(1);
         $scope.goTo = function(link){
             $location.path( link );
         }
     })
     .controller('ProgramSingle', function ($scope, $routeParams, programFac) {
+        $scope.select(1);
         var id = $routeParams.id,
             program = programFac.program;
 

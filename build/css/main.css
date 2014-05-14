@@ -685,8 +685,15 @@ body {
 .onama div {
   float: left;
 }
-.onama .sur p {
+.onama .sur .small {
   margin: 10px 0;
+}
+.onama .sur .small.last {
+  margin-top: 20px;
+}
+.onama .sur p {
+  float: left;
+  margin: 10px 0 0;
 }
 .onama .black {
   width: 100%;

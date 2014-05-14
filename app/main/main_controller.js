@@ -32,7 +32,8 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
         controller: 'LokacijaCtrl'
       })
       .when('/kontakt', {
-        templateUrl:'kontakt/kontakt.html'
+        templateUrl:'kontakt/kontakt.html',
+        controller: 'KontaktCtrl'
       })
       .when('/onama', {
         templateUrl:'onama/onama.html'
@@ -46,7 +47,7 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
         $scope.class = "bck" + rand;
   })
   .controller('MainCtrl', function ($scope) {
-    $scope.showNav = false;
+    $scope.showNav = true;
     $scope.selected = 0;
     $scope.navigation = [
         {
@@ -88,15 +89,4 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
     $scope.showMenu = function(){
         $scope.showNav = !$scope.showNav;
     }
-    })
-    .directive('click', function ($timeout) {
-        return {
-            restrict: 'A',
-            link: function (scope, element) {
-                $timeout(function(){
-                    element[0].click();
-                },200);
-
-            }
-    }
-});
+    });
