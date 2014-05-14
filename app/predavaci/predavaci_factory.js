@@ -14,7 +14,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Windows Phone Development",
-                    datum: "Četvrtak 22.04 — 13.00 - 14.00 h"
+                    datum: "Četvrtak 22.05 — 13.00 - 14.00 h"
                 }
             },
             {
@@ -27,7 +27,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Mobile Gaming - Od ideje do uspjeha!",
-                    datum: "Četvrtak 22.04 — 16.10 — 17.00 h",
+                    datum: "Četvrtak 22.05 — 16.10 — 17.00 h",
                     opis: "Na aktualnom primjeru nedavno dovršene igre Fruityply, pozabavit ćemo se najvažnijim aspektima mobile gaming developmenta: od inicijalnog trenutka inspiracije, preko ispitivanja i 'drilanja' ideje, konceptualne razrade, dizajniranja, kodiranja, mehanizama monetizacije pa sve do promotivnih aktivnosti i rekapitulacije uspješnosti. Potrudit ćemo se dočarati vam trnovit ali iznimno zabavan svijet industrije mobilnih igara."
                 }
             },
@@ -41,7 +41,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Music Production Academy",
-                    datum: "Četvrtak 22.04 — 17.10 — 17.50 h"
+                    datum: "Četvrtak 22.05 — 17.10 — 17.50 h"
                 }
             },
             {
@@ -54,7 +54,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Music Production Academy",
-                    datum: "Četvrtak 22.04 — 18.00 — 18.40 h"
+                    datum: "Četvrtak 22.05 — 18.00 — 18.40 h"
                 }
             },
             {
@@ -67,7 +67,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Interaktivni postav Ivanina kuća bajke",
-                    datum: "Četvrtak 22.04 — 20.00 — 20.45 h",
+                    datum: "Četvrtak 22.05 — 20.00 — 20.45 h",
                     opis: "Ivanina kuća bajke je multimedijalni i interdisciplinarni centar za posjetitelje otvoren u prosincu 2013. godine u Ogulinu. Kako je nastao i što sve skriva jedan od 'najvažnijih projekata suvremene kulturno-turističke ponude Hrvatske' predstavit će nam Vladimir Končar, jedan od autora projekta."
                 }
             },
@@ -81,7 +81,7 @@ angular.module('mop-predavaci')
                 ,predavanje: {
                     type: "Predavanje",
                     naslov: "Dizajn na rubu",
-                    datum: "Četvrtak 22.04 — 20.45 — 21.15 h"
+                    datum: "Četvrtak 22.05 — 20.45 — 21.15 h"
                 }
             },
             {
@@ -94,7 +94,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "In the box",
-                    datum: "Petak 23.04 — 17.00 — 17.50 h",
+                    datum: "Petak 23.05 — 17.00 — 17.50 h",
                     opis: "Fokus predavanja biti će postizanje što više kvalitete produkcije u kućnim uvjetima. Naglasak će biti na 'in the box' obradi zvuka, te će biti objašnjene osnove o potrebnoj opremi za snimanje i manipulaciju zvuka. Dio radionice će biti rezerviran za 'pitanja i odgovore' gdje ćete moći saznati sve što Vas zanima vezano za spomenute teme. "
                 }
             },
@@ -108,7 +108,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Performans i Varaždin",
-                    datum: "Petak 23.04 — 18.25 — 18.45 h",
+                    datum: "Petak 23.05 — 18.25 — 18.45 h",
                 }
             },
             {
@@ -121,7 +121,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Mireldy",
-                    datum: "Petak 23.04 — 18.50 — 19.10 h",
+                    datum: "Petak 23.05 — 18.50 — 19.10 h",
                 }
             },
             {
@@ -134,7 +134,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Dizajniranje Illectricity Festivala",
-                    datum: "Petak 23.04 — 19.20 — 19.40 h",
+                    datum: "Petak 23.05 — 19.20 — 19.40 h",
                     opis: "llectricity festival jedan je od vodećih hrvatskih festivala elektronske glazbe. Na predavanju ćemo predstaviti rad na ovogodišnjem vizualnom identitetu festivala, obilježen inovativnom borbom protiv malog budžeta i raznovrsnim suradnjama - sa modnim dizajnericama, fotografima, VJ-ima i tattoo artistima."
                 }
             },
@@ -148,7 +148,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Foraging for Creativity",
-                    datum: "Petak 23.04 — 19.45 — 20.05 h",
+                    datum: "Petak 23.05 — 19.45 — 20.05 h",
                     opis: "Koje sve sastojke za kreativnost možemo pronaći u divljini? Kako ostale profesije analiziraju i tretiraju temu kreativnosti? Koje preporuke najboljeg svjetskog kuhara mogu biti korisne i UX dizajnerima?"
                 }
             },
@@ -162,7 +162,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "(Dija)kritika u prostoru",
-                    datum: "Petak 23.04 — 20.10 — 20.30 h",
+                    datum: "Petak 23.05 — 20.10 — 20.30 h",
                     opis:"‘Dijakritika’ je foto-dokumentarni i dizajnerski projekt u trajanju, baziran na bilježenju situacija u gradu kojima autor uočava, dokumentira i prezentira svu kreativnost pri upotrebi (hrvatskih) dijakritika zatečenih u raznolikim (zlo)upotrebama u javnom prostoru."
                 }
             },
@@ -176,7 +176,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "XFO WORKSHOP",
-                    datum: "Subota 24.04 — 11.00 — 13.30 h",
+                    datum: "Subota 24.05 — 11.00 — 13.30 h",
                     opis:"U iščekivanju drugog XFO Fotomaratona, Udruga VUDU vam donosi prvi - XFO Workshop! Zajedno sa multimedijalnim festivalom MOP, XFO ekipa za vas priprema jednu nesvakidašnju radionicu! Potražite svoj X faktor u fotografijama, a atmosferu će vam dodatno mistificirati čak 5 zmija te naši atraktivni modeli u zanimljivim odjevnim kombinacijama dizajnerice Valerije V-design! Imate li hrabrosti? Dođite, okružite se kraljevskim pitonima i kukuruznim zmijama i otkrijte svoj foto faktor X na XFO Workshopu!"
                 }
             },
@@ -190,7 +190,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "One Code to Rule Them All",
-                    datum: "Subota 24.04 — 10.15 — 11.00 h"
+                    datum: "Subota 24.05 — 10.15 — 11.00 h"
                 }
             },
             {
@@ -203,7 +203,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Razvoj iOS APP - MULLY",
-                    datum: "Subota 24.04 — 11.00 — 11.45 h",
+                    datum: "Subota 24.05 — 11.00 — 11.45 h",
                     opis: "Predavanje obuhvaća razvoj golferske fantasy aplikacije za američko tržište. Koncept aplikacije je zamišljen kao fantasy natjecanje između timova sastavljenih od profesionalnih golf igrač te stvarnog natjecanja profesionalnih i poluprofesionalnih golfera na području Californie. Svrha predavanja je prezentacija razvoja aplikacije od inicijalne ideje  preko dizajna (skica, grafickog dizajna) i na kraju same realizaije kroz programiranje."
                 }
             },
@@ -217,7 +217,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "3D ANIMACIJA",
-                    datum: "Subota 24.04 — 12.00 — 13.00 h"
+                    datum: "Subota 24.05 — 12.00 — 13.00 h"
                 }
             },
             {
@@ -230,7 +230,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Augmented reality",
-                    datum: "Subota 24.04 — 13.00 — 13.30 h"
+                    datum: "Subota 24.05 — 13.00 — 13.30 h"
                 }
             },
             {
@@ -243,7 +243,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Design is a job!",
-                    datum: "Subota 24.04 — 18.00 — 18.20 h"
+                    datum: "Subota 24.05 — 18.00 — 18.20 h"
                 }
             },
             {
@@ -256,7 +256,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Na konju smo .net",
-                    datum: "Subota 24.04 — 18.25 — 18.45 h"
+                    datum: "Subota 24.05 — 18.25 — 18.45 h"
                 }
             },
             {
@@ -269,7 +269,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Good client made me do it",
-                    datum: "Subota 24.04 — 18.50 — 19.35 h",
+                    datum: "Subota 24.05 — 18.50 — 19.35 h",
                     opis: "Every good project needs a client who trust you and believes in your work. Without a proper client the design has no real value. Clients gives us boundaries and boundaries are the essence of creativity. Therefore creativity has a purpose and a concept that is for something or someone. I will show the importance of trust in building a brand and its interaction towards the end user. How to use multidisciplinary knowledge in building a solution that is different, adaptive and focused. How to be bold, how to win and how to fail."
                 }
             },
@@ -283,7 +283,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "City | Data | Future – Dizajn interakcija u hibridnom urbanom prostoru",
-                    datum: "Subota 24.04 — 19.40 — 20.10 h",
+                    datum: "Subota 24.05 — 19.40 — 20.10 h",
                     opis: "Suvremeni gradovi ubrzano postaju hibridi fizičkog okoliša i digitalne sfere podataka. Hibridni grad zapravo je tehnološki proširen grad u kojem se digitalni krajolik stapa s našim stvarnim, fizičkim svijetom, te nam, neprestano rastući, nudi sve bogatija digitalna iskustva. Gradovi budućnosti će očigledno sadržavati kompleksne mreže međusobno povezanih heterogenih tehnologijskih sustava. Dizajna interakcija u urbanom okruženju se, u kontekst ovakvog tehnološki proširenog okoliša, kroz kritičku dizajnersku praksu, fokusira na ljudske aktivnosti, iskustva i ponašanja koja se događaju unutar njih. Ovakav hibridni grad neprestano će dobivati nove mogućnosti, kapacitete prikupljanja i generiranja podataka. Stoga je izazov ove dizajnerske prakse, dati smisao i značaj tim podacima, te ih učiniti transparentima i upotrebljivim građanima gradova budućnosti. Predavanje će govoriti o navedenoj temi kroz primjere iz osobne dizajnersko–edukacijske prakse na Umjetničkoj akademiji, te kroz projekte nastale u sklopu UrbanIxD platforme, koji metodologijom kritičkog dizajna i dizajna fikcija spekuliraju o mogućim budućim scenarijima, koji mi, kao građani takvih gradova, možemo očekivati."
                 }
             },
@@ -297,7 +297,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Vrli novi svijet interakcija",
-                    datum: "Subota 24.04 — 20.15 — 20.35 h",
+                    datum: "Subota 24.05 — 20.15 — 20.35 h",
                     opis: " Što su uopće interakcije i u kojem ih mediju doživljavamo i imamo priliku iskusiti? U školi često učimo o fizikalnim interakcijama i interakcijama na atomskim i molekularnim razinama, u kontekstu sociologije pričamo i o međuljudskim interakcijama, ali posebnu pozornost će nam danas privuči digitalne i web interakcije. Na koji način mijenjaju naš život, kako nam ga čine boljim ili lošijim te kako sami možemo postati i svjesniji interakcija u koje stupamo te prilikom njihovih mogućih budućih dizajniranja obratiti pozornost na ključne elemente njih - ljude, korisnike. Dotaknut ćemo se pojma web, mobilnih i digitalnih interakcija te njihovog utjecaja na pojedince, društvo i kulturu u cjelini."
                 }
             },
@@ -311,7 +311,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Projektor.hr",
-                    datum: "Subota 24.04 — 20.15 — 20.35 h",
+                    datum: "Subota 24.05 — 20.15 — 20.35 h",
                     opis: "Platforma za prezentaciju i financiranje kreativnih i umjetničkih projekata koja se razvija u suradnji sa studijom 42 i Agencijom 404."
                 }
             },
@@ -325,7 +325,7 @@ angular.module('mop-predavaci')
                 predavanje: {
                     type: "Instalacija",
                     naslov: "Whatever Dance Toolbox",
-                    datum: "Subota 24.04 — 21.00 — 23.00 h",
+                    datum: "Subota 24.05 — 21.00 — 23.00 h",
                     opis: "Jedna od najeminentnijih hrvatskih izvedbenih skupina BADco., postavit će svoj Whatever Dance Toolbox (WDT). Riječ je o skupu softverskih alata za analizu i razvoj plesa i pokreta. Inicijalno razvijan iz tehnologija motion capturea, WDT je svojevrsno interaktivno ogledalo koje je korisno u plesnom studiju, ali i u svakodnevnom, laičkom bavljenju plesom. Softver se koristi kao poveznica između kamere koja snima pokret u stvarnom vremenu, kompjutora i projektora, a plesač tijekom probe može manipulirati sliku pokreta i time dobiti 'ogledalo' koje sugerira moguće kvalitete pokreta koje on sam svojim kretanjem još de facto nije proizveo."
                 }
             },

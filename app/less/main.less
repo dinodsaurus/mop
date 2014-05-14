@@ -7,6 +7,9 @@
   font-family:"Maison Neue Book", Helvetica, Arial, Sans-Serif, sans-serif; font-weight:300; font-style:normal;
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
 a{
   .transition(.3);
   border:none;
@@ -70,6 +73,7 @@ body{
     margin-left:50px;
     cursor:pointer;
   }
+
   h1{
     color:@lightBlue;
     font-size:30px;
@@ -137,6 +141,9 @@ body{
   top:0;
   width:50%;
   height:100%;
+  .mobileMain{
+    display:none;
+  }
   a{
     display:block;
     float:left;
@@ -152,6 +159,9 @@ body{
       width:47%;
       margin-right:5%;
       float:left;
+      a{
+        width:100%;
+      }
       .img{
         position:relative;
         line-height: 0;
@@ -462,7 +472,7 @@ body{
   }
 }
 .lokacija{
-  position:absoluet;
+  position:absolute;
   width:100%;
   height:100%;
   overflow-y:scroll;
@@ -545,6 +555,7 @@ body{
       margin-top:20px;
     }
     p{
+      width:100%;
       float:left;
       margin:10px 0 0;
     }
@@ -709,4 +720,264 @@ body{
 }
 @-webkit-keyframes slideOutLeft {
   to 		{ -webkit-transform: translateX(-100%); }
+}
+@media all and (max-width: 699px){
+  body{
+    overflow-y:auto;
+  }
+  .right .mobileMain{
+    display:block;
+    h1{
+      color:@lightBlue;
+      font-size:30px;
+      padding:0 30px;
+      margin-top:30px;
+      font-family: "Audree Audree L1 2";
+      font-style: normal;
+      font-weight: normal;
+      font-stretch: normal;
+    }
+    p{
+      margin-top:30px;
+      font-size:20px;
+      padding:0 30px;
+    }
+    .social{
+      margin-top:30px;
+      padding:0 30px;
+      list-style: none;
+      position:relative;
+      li{
+        float:left;
+        width:100%;
+      }
+      a{
+        color:@grey;
+        text-decoration:none;
+      }
+      a:hover{
+        color:@lightBlue;
+        border-bottom:1px solid @lightBlue;
+      }
+    }
+  }
+  .left{
+    display:none;
+  }
+  .right{
+    position:absolute;
+    width:100%;
+    left:0;
+    margin-top:60px;
+    height:auto;
+    overflow: visible;
+
+  }
+  .mobileNav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background:#2b2b2b;
+    .bck{
+      z-index:101;
+      cursor:pointer;
+      position:absolute;
+      display:block;
+      width: 60px;
+      height:60px;
+      background:@lightBlue;
+      left:0;
+      top:0;
+      cursor:pointer;
+      .img{
+        width:100%;
+        height:100%;
+        background: url("../img/bck.png") no-repeat;
+        background-position:center center;
+      }
+    }
+    .nav{
+      position:relative;
+      height:150px;
+      overflow: hidden;
+      -webkit-transition:height linear .2s;
+      transition:height linear .2s;
+      overflow: hidden;
+    }
+    .nav.ng-hide {
+      height: 0;
+    }
+    .nav.ng-hide-add, .nav.ng-hide-remove {
+      display:block!important;
+    }
+    .icon{
+      position:relative;
+      float:left;
+      width:100%;
+      .hambi{
+        margin-top:21px;
+        float:right;
+        width:40px;
+        height:30px;
+        background: url("../img/ikona.png") no-repeat;
+        background-size:100% auto;
+      }
+      .hambi.active{
+        background-position: 0 -35px;
+      }
+      h2{
+        float:left;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        line-height:60px;
+        margin:0px;
+        font-family: "Audree Audree L1 2";
+        font-style: normal;
+        font-weight: normal;
+        font-stretch: normal;
+      }
+      span{
+        position:absolute;
+        right:10px;
+        top:-5px;
+      }
+    }
+    ul{
+      width:100%;
+      float:left;
+      list-style:none;
+      padding-left:50px;
+      padding-top:20px;
+      li{
+        width:33%;
+        float:left;
+        margin-bottom:20px;
+      }
+      a{
+        color:white;
+      }
+      a:hover{
+        color:@lightBlue;
+      }
+    }
+  }
+  .right .predavaci{
+    overflow-y: visible;
+    padding:30px;
+    .profile{
+      width:100%;
+      a{
+        width:100%;
+      }
+    }
+  }
+  .right .gostSingle{
+    position:relative;
+    height:auto;
+    overflow: visible;
+    .bck{
+      display:none;
+    }
+    .gost{
+      padding:0 30px 40px;
+      h2{
+        margin-top:30px;
+      }
+    }
+    .pred{
+      padding:20px 30px 50px;
+    }
+  }
+  .right .program{
+    position:relative;
+    ul{
+      li{
+        padding:50px 30px;
+      }
+    }
+  }
+  .right .progSing{
+    position:relative;
+    overflow:visible;
+    .fullWidth{
+      display:none;
+    }
+  }
+  .right .gallery{
+    position:relative;
+    overflow:visible;
+    padding:0px 30px;
+
+    ul{
+      li{
+        width:45%;
+        margin:10% 10% 0 0;
+      }
+      li:nth-child(2n){
+        margin:10% 0 0 0;
+      }
+    }
+  }
+  .right .kontakt{
+    position:relative;
+    padding:0 30px;
+    overflow:visible;
+    h2{
+      margin:30px 0 0 0;
+    }
+    p{
+      padding:0;
+    }
+  }
+  .right .partneri{
+    position:relative;
+    overflow: visible;
+    padding:30px;
+  }
+  .right .lokacija{
+    position:relative;
+    overflow: visible;
+    .mapa{
+      height:300px;
+    }
+    .lokacije ul{
+      padding:0 30px;
+    }
+  }
+  .right .onama{
+    position:relative;
+    overflow:visible;
+    h2{
+      margin:30px;
+    }
+    p{
+      padding:0 30px;
+    }
+    .white{
+      padding:0;
+    }
+  }
+  .right .mainPage{
+    display:none;
+    position:relative;
+      height:300px;
+  }
+  .progSing ul {
+    padding: 0 25px;
+  }
+  .mobileNav{
+    h2{
+      color:white;
+      font-size:30px;
+      float:right;
+      color:white;
+    }
+    ul{
+      width:100%;
+      padding-left:25px;
+    }
+  }
 }

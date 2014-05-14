@@ -1,39 +1,39 @@
 <!DOCTYPE html>
+<!--
+MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN.
+MNM                                         NN.
+MNN                                         NN.
+MNN                                         NNNNNNM
+MNN                                         NN..NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN             NN.   $NM    NNN            NN. NNM
+MNN             NN.   $NM    NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN             NN.   $NN    NNN            NN. NNM
+MNN             NN.   . .    NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN             NN.   $NN    NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN             NN.          NNN            NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNN                                         NN. NNM
+MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN. NNM
+NN.                                        NNM
+NN.                                        NNM
+MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNM
+-->
 <html>
   <head>
-      <!--
-      MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN.
-      MNM                                         NN.
-      MNN                                         NN.
-      MNN                                         NNNNNNM
-      MNN                                         NN..NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN             NN.   $NM    NNN            NN. NNM
-      MNN             NN.   $NM    NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN             NN.   $NN    NNN            NN. NNM
-      MNN             NN.   . .    NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN             NN.   $NN    NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN             NN.          NNN            NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNN                                         NN. NNM
-      MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN. NNM
-      NN.                                        NNM
-      NN.                                        NNM
-      MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNM
-      -->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
       <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
@@ -56,7 +56,21 @@
     <link rel="stylesheet" href="http://fonts.typonine.com/WF-003562-001104.css" type="text/css" />
     <link rel="stylesheet" href="//f.fontdeck.com/s/css/t4H3X77U8eTSJKGM5rxvpQRV3hk/http://localhost:9000/45519.css" type="text/css" />
   </head>
-  <body ng-app="mop" ng-controller="MainCtrl">
+  <body ng-app="mop" ng-controller="MainCtrl" ng-cloak>
+      <div class="mobileNav">
+          <a ng-if="page.bck" class="bck" ng-click="mobileBck()">
+              <div class="img"></div>
+          </a>
+          <div class="icon">
+              <h2>{{page.title}}</h2>
+              <span class="hambi" ng-click="showMenu()" ng-class="{active: showNav}"></span>
+          </div>
+          <ul class="nav" ng-show="showNav">
+              <li ng-repeat="item in navigation"  ng-click="select($index)">
+                  <a ng-click="showMenu('mobile')" href="{{item.path}}" ng-class="{active: $index == selected}">{{item.name}}</a>
+              </li>
+          </ul>
+      </div>
     <div class="left">
         <span class="si-icon si-icon-reverse si-icon-hamburger-cross" data-icon-name="hamburgerCross" ng-click="showMenu()"></span>
         <div class="bor"></div>
@@ -82,7 +96,16 @@
     <div class="right {{ pageClass }} group" ng-view="">
 
     </div>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-31219245-6', 'mop-fest.com');
+        ga('send', 'pageview');
+
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script src="lib.js"></script>
     <script src="templates.js"></script>

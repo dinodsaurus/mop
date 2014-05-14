@@ -107,7 +107,7 @@ angular.module('mop-program')
                         ime: ' ŠALTER - PARTY, ROGOZ ',
                         author: "Mixel, Mae'n, Wuff, Presidente,  Kotam",
                         time: "22.30 — 04.00h",
-                        link: "#/gosti/13"
+                        link: "#/gosti/30"
                     }
 
                 ]
