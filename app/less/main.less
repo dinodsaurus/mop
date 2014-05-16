@@ -549,7 +549,7 @@ body{
   }
   .sur{
     .small{
-      margin:10px 0;
+      margin:0;
     }
     .small.last{
       margin-top:20px;
@@ -557,7 +557,7 @@ body{
     p{
       width:100%;
       float:left;
-      margin:10px 0 0;
+      margin:0;
     }
   }
   .black{
@@ -592,7 +592,7 @@ body{
   }
   p{
     padding:0 50px;
-    margin:20px 0;
+    margin:0 0 20px;
   }
   .small{
     margin:0;
@@ -621,6 +621,7 @@ body{
     font-style: normal;
     font-weight: normal;
     font-stretch: normal;
+    padding-bottom:10px;
   }
   ul{
     list-style:none;
@@ -635,7 +636,7 @@ body{
           position: absolute;
           width: 100%;
           height: 100%;
-          background: url("../img/gostiHover.png");
+          background:rgba(0,0,0,0.1);
           .background-size(cover);
           .transition(.4);
           h2 {
@@ -660,12 +661,12 @@ body{
     }
   }
 }
-.ng-leave        {
+div[ng-view].ng-leave        {
   -webkit-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
   -moz-animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
   animation:slideOutLeft 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
 }
-.ng-enter 		{
+div[ng-view].ng-enter 		{
   -webkit-animation:slideInRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
   -moz-animation:slideInRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
   animation:slideInRight 0.7s both cubic-bezier(0.610, 0.120, 0.395, 0.900);
@@ -951,13 +952,17 @@ body{
     position:relative;
     overflow:visible;
     h2{
-      margin:30px;
+      padding:0;
+      margin:0 30px 30px;
     }
     p{
       padding:0 30px;
     }
     .white{
-      padding:0;
+      padding:30px 0;
+    }
+    .black{
+      padding:30px 0;
     }
   }
   .right .mainPage{

@@ -63,11 +63,11 @@ MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNM
           </a>
           <div class="icon">
               <h2>{{page.title}}</h2>
-              <span class="hambi" ng-click="showMenu()" ng-class="{active: showNav}"></span>
+              <span class="hambi" ng-click="showMenu('mobile')" ng-class="{active: mobileNav}"></span>
           </div>
-          <ul class="nav" ng-show="showNav">
+          <ul class="nav" ng-show="mobileNav">
               <li ng-repeat="item in navigation"  ng-click="select($index)">
-                  <a ng-click="showMenu('mobile')" href="{{item.path}}" ng-class="{active: $index == selected}">{{item.name}}</a>
+                  <a scrollup ng-click="showMenu('mobile')" href="{{item.path}}" ng-class="{active: $index == selected}">{{item.name}}</a>
               </li>
           </ul>
       </div>
@@ -79,7 +79,7 @@ MNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNM
                 <a href="{{item.path}}" ng-class="{active: $index == selected}">{{item.name}}</a>
             </li>
         </ul>
-        <h1>MOP 3<br/> festival multimedije<br/> 22.05 — 24.05.2014</h1>
+        <h1>MOP 3<br/> festival multimedije<br/> 22.05 — 24.05.2014.</h1>
         <p>Festival multimedije, oblikovanja i primjene s ciljem razmjene znanja i povećanja potencijala multimedijalne zajednice. Generalni pokrovitelji festivala su Sveučilište Sjever i Studentski zbor Sveučilišta Sjever.</p>
         <ul class="social">
             <li>

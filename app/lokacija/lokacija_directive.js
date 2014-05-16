@@ -57,10 +57,10 @@ angular.module('mop-lokacija')
 
 
             for(var i = 0; i < markers.length; i++){
-                var cont = "Palača herzer, Franjevački trg 6";
+                var cont = "Palača Herzer, Franjevački trg 6";
 
                 if(i === 1){
-                    var cont = "Rogoz klub, Augusta Cesarca 1";
+                    var cont = "Scena & Bar Rogoz, Augusta Cesarca 1";
                 }
                 if(i === 2){
                     cont = "Stari grad, Strossmayerovo šetalište 7"

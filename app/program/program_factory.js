@@ -69,9 +69,16 @@ angular.module('mop-program')
                     },
                     {
                         type: "predavanje",
+                        ime: 'Share or Die',
+                        author: "Unity",
+                        time: "18.00 — 18.30h",
+                        link: "#/gosti/32"
+                    },
+                    {
+                        type: "predavanje",
                         ime: 'Performans grada',
                         author: "Ivan Mesek",
-                        time: "18.25 — 18.45h",
+                        time: "18.30 — 18.50h",
                         link: "#/gosti/8"
                     },
                     {
@@ -201,9 +208,9 @@ angular.module('mop-program')
                     },
                     {
                         type: "MOP Party",
-                        ime: 'PARTY - TVRĐAVA STARI GRAD.',
-                        author: "CHEW THE FAT!, DMT,  Filip Motovunski, MC Big Oz,  Oblik 3",
-                        time: "21.30 — 23.00h",
+                        ime: 'CHEW THE FAT! - STARI GRAD.',
+                        author: "DMT,  Filip Motovunski, MC Big Oz,  Oblik 3",
+                        time: "23.00 — 04.00h",
                         link: "#/gosti/26"
                     }
                 ]
