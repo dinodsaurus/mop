@@ -145,7 +145,7 @@ angular.module('mop-program')
                     },
                     {
                         type: "predavanje",
-                        ime: '3D animacija',
+                        ime: 'Post produkcija',
                         author: "Bold-Studio",
                         time: "12.00 — 13.00h",
                         link: "#/gosti/17"
@@ -155,6 +155,13 @@ angular.module('mop-program')
                         ime: 'Augmented reality',
                         author: "Booqua creative studio",
                         time: "13.00 — 13.30h",
+                        link: "#/gosti/18"
+                    },
+                    {
+                        type: "predavanje",
+                        ime: 'Edukacija…ili kuhalo za kavu?',
+                        author: "Marko Breljak",
+                        time: "13.30 — 14.00h",
                         link: "#/gosti/18"
                     },
                     {

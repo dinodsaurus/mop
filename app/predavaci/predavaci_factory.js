@@ -117,7 +117,7 @@ angular.module('mop-predavaci')
                 ime: "Ivan Mesek",
                 img: "img/mesek_slika1.png",
                 bigImg: "img/mesek_slika2.png",
-                bio: "Ivan Mesek rođen je 1971. u Varaždinu gdj ezavršava Gimnaziju. 1989. upisuje Akademiju likovnih umjetnosti u Zagrebu, nastavnički odjel, a od 1996.-1999. pohađa poslijediplomski studij pri Akademiji likovnih umjetnosti u Munchenu. 1992.i 1993. polaznik je Ljetne akademije likovnih umjetnosti u Salzburgu. Ravnatelj je Galerijskog centra Varaždin u sklopu kojeg organizira Dane performansa. Multimedijalni je umjetnik koji se bavi slikarstvom, kiparstvom, performansom, video-umjetnošću."
+                bio: "Ivan Mesek rođen je 1971. u Varaždinu gdje završava Gimnaziju. 1989. upisuje Akademiju likovnih umjetnosti u Zagrebu, nastavnički odjel, a od 1996.-1999. pohađa poslijediplomski studij pri Akademiji likovnih umjetnosti u Munchenu. 1992.i 1993. polaznik je Ljetne akademije likovnih umjetnosti u Salzburgu. Ravnatelj je Galerijskog centra Varaždin u sklopu kojeg organizira Dane performansa. Multimedijalni je umjetnik koji se bavi slikarstvom, kiparstvom, performansom, video-umjetnošću."
                 ,links: [],
                 predavanje: {
                     type: "Predavanje",
@@ -231,7 +231,7 @@ angular.module('mop-predavaci')
                 ,links: ["www.bold-studio.com/"],
                 predavanje: {
                     type: "Predavanje",
-                    naslov: "3D ANIMACIJA",
+                    naslov: "Post produkcija",
                     datum: "Subota 24.05. — 12.00 — 13.00 h"
                 }
             },
@@ -249,16 +249,30 @@ angular.module('mop-predavaci')
                 }
             },
             {
+                id: 32,
+                ime: "Marko Breljak",
+                img: "img/breljak_slika1.jpg",
+                bigImg: "img/breljak_slika2.jpg"
+                ,links: ["www.educirajme.com"],
+                predavanje: {
+                    type: "Instalacija",
+                    naslov: "Edukacija…ili kuhalo za kavu?",
+                    datum: "Subota 24.05. — 21.00 — 23.00 h",
+                    opis: "Predavanje o važnosti cjeloživotnog obrazovanja. Zašto mladi ne vole riječ edukacija? Zašto se ne vole dodatno educirati? Što je to EducirajMe? Kako EducirajMe pomaže mladima (i onima koji se tako osjećaju) da promijene svoj život i karijeru. EducirajMe svim gostima predavanja omogučuju 50 vaučera (1500 kuna popusta) na jednu od četiri edukacije po odabiru."
+                }
+            },
+            {
                 id: 19,
                 ime: "Sandro Dujmenović",
                 img: "img/sandro_2.png",
                 bigImg: "img/sandro_1.png",
-                bio: "Sandro Dujmenović, zadarski dizajner s zagrebačkom adresom. Živi i radi u Bunchu."
+                bio: "Sandro Dujmenovic je designer i art direktor. Dizajnira u Bunch design agenciji i vodi svoju praksu. Suradjuje s klijentima iz cijelog svijeta kroz digitalne i print medije. Nedavno magistrirao."
                 ,links: ["sandrosandro.com/","www.bunchdesign.com/"],
                 predavanje: {
                     type: "Predavanje",
                     naslov: "Design is a job!",
-                    datum: "Subota 24.05. — 18.00 — 18.20 h"
+                    datum: "Subota 24.05. — 18.00 — 18.20 h",
+                    opis: "S fakulteta na posao iz prve ruke. Zablude, laži i realnost kreativne struke."
                 }
             },
             {
@@ -393,6 +407,7 @@ angular.module('mop-predavaci')
                 bio: "BIO Jedan od uzdanika zagrebačke klupske scene odavno je prešao granice hrvatskih plesnih podija i osvojio susjedstvo gostujući na značajnim eventima; uključujući i redovnu potporu regionalnim festivalima. Definirajući svoj zvuk kroz prizmu eksperimentiranja svim žanrovima elektronike, s naglaskom na cosmic-elektro, DJ Mixel zadobio je pažnju izbirljive publike koja poznaje i prati recentna izdanja elektronske glazbe. Svjesno prateći atmosferu unutar klupskog okružja, njegov energičan stil može se okategorizirati kao direktan flert i interakcija, ne samo sa žanrovima već i očekivanjima same publike. Uz težnju za konstantnim otkrivanjem novih pravaca i tehnika, vještom i smionom kombiniranju renomiranih svjetskih i domaćih izdanja, Mixel neosporno je ime od kojeg se za pultom može očekivati puno, ali u konačnici dobiti i više."
                 ,links: ["soundcloud.com/theMixel","www.mixcloud.com/theMixel","www.facebook.com/theMixel","soundcloud.com/substanceirl/substance-mix-series-mixel-zagreb-croatia-012"]
             },
+
 
         ]
         return {

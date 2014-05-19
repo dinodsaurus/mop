@@ -7,19 +7,19 @@ angular.module('mop-predavaci',[])
         $scope.gosti = predavaciFac.gosti;
         $scope.select(2);
     })
-    .controller('PredavacCtrl', function ($scope, predavaciFac, $routeParams, $window) {
+    .controller('PredavacCtrl', function ($scope, predavaciFac, $routeParams) {
         $scope.page.title = "Gosti";
         $scope.page.bck = true;
         $scope.select(2);
-        var id = parseInt($routeParams.id, 10);
-        var gosti = predavaciFac.gosti;
+        $scope.page.title = "Gosti";
+        var id = parseInt($routeParams.id, 10),
+            gosti = predavaciFac.gosti;
         for(var i = 0; i < gosti.length; i++){
             if( id === gosti[i].id){
-                $scope.page.title = "Gosti";
                 $scope.gost = gosti[i];
             }
         }
         $scope.bck = function(){
-            $window.history.back();
+            $location.path('/predavaci');
         }
     });
