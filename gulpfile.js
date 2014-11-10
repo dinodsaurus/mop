@@ -52,7 +52,7 @@ gulp.task('vendorCSS', function(){
 
 gulp.task('image', function () {
     gulp.src('./app/img/*')
-        //.pipe(image())
+        .pipe(image())
         .pipe(gulp.dest('./build/img'));
 });
 
@@ -69,7 +69,7 @@ gulp.task('copy', function() {
 
 gulp.task('watch',function(){
     gulp.watch([
-        'build/**/*.html',        
+        'build/**/*.html',
         'build/**/*.js',
         'build/**/*.less'
     ], function(event) {

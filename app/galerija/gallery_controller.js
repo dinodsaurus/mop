@@ -5,7 +5,7 @@ angular.module('mop-galerija',[])
         $scope.page.title = "Galerija";
         $scope.page.bck = false;
         $scope.select(3);
-        var insta = galerijaFac.instagram("imputmop");
+        var insta = galerijaFac.instagram("mopfest");
         insta.get().then(function(data){
             $log.info(data);
             $scope.images = data.data;

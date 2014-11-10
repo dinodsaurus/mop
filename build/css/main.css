@@ -810,14 +810,14 @@ body {
   opacity: 1;
 }
 div[ng-view].ng-leave {
-  -webkit-animation: slideOutLeft 0.7s both cubic-bezier(0.61, 0.12, 0.395, 0.9);
-  -moz-animation: slideOutLeft 0.7s both cubic-bezier(0.61, 0.12, 0.395, 0.9);
-  animation: slideOutLeft 0.7s both cubic-bezier(0.61, 0.12, 0.395, 0.9);
+  -webkit-animation: slideOutLeft 0.5s both cubic-bezier(0.53, 0.055, 0.335, 0.915);
+  -moz-animation: slideOutLeft 0.5s both cubic-bezier(0.53, 0.055, 0.335, 0.915);
+  animation: slideOutLeft 0.5s both cubic-bezier(0.53, 0.055, 0.335, 0.915);
 }
 div[ng-view].ng-enter {
-  -webkit-animation: slideInRight 0.7s both cubic-bezier(0.61, 0.12, 0.395, 0.9);
-  -moz-animation: slideInRight 0.7s both cubic-bezier(0.61, 0.12, 0.395, 0.9);
-  animation: slideInRight 0.7s both cubic-bezier(0.61, 0.12, 0.395, 0.9);
+  -webkit-animation: slideInRight 0.7s both cubic-bezier(0.53, 0.055, 0.335, 0.915);
+  -moz-animation: slideInRight 0.7s both cubic-bezier(0.53, 0.055, 0.335, 0.915);
+  animation: slideInRight 0.7s both cubic-bezier(0.53, 0.055, 0.335, 0.915);
 }
 /* slide in from the right */
 @keyframes slideInRight {

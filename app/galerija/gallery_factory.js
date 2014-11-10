@@ -1,5 +1,4 @@
-https://api.instagram.com/v1/tags/imputmop/media/recent
-    'use strict';
+'use strict';
 
 angular.module('mop-galerija')
     .factory("galerijaFac", function ($http,$q) {
@@ -14,14 +13,14 @@ angular.module('mop-galerija')
                     var config = {
                         'params': {
                             'client_id': clientId,
-                            'count': 30,
+                            'count': 60,
                             'callback': 'JSON_CALLBACK'
                         }
                     };
                     return $http.jsonp(url, config);
                 }
             };
-        }
+        };
 
         return {
             instagram: instagram

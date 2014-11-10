@@ -1,5 +1,5 @@
 ( function( window ) {
-	
+
 	'use strict';
 
 	/*** helper functions ***/
@@ -14,7 +14,7 @@
 	}
 
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -30,17 +30,18 @@
 	}
 
 	// http://snipplr.com/view.php?codeview&id=5259
-	function isMouseLeaveOrEnter( e, handler ) { 
-		if (e.type != 'mouseout' && e.type != 'mouseover') return false; 
-		var reltg = e.relatedTarget ? e.relatedTarget : 
-		e.type == 'mouseout' ? e.toElement : e.fromElement; 
-		while (reltg && reltg != handler) reltg = reltg.parentNode; 
-		return (reltg != handler); 
+	function isMouseLeaveOrEnter( e, handler ) {
+		if (e.type != 'mouseout' && e.type != 'mouseover') return false;
+		var reltg = e.relatedTarget ? e.relatedTarget :
+		e.type == 'mouseout' ? e.toElement : e.fromElement;
+		while (reltg && reltg != handler) reltg = reltg.parentNode;
+		return (reltg != handler);
 	}
 
 	/*** svgIcon ***/
 
 	function svgIcon( el, config, options ) {
+		console.log(el);
 		this.el = el;
 		this.options = extend( {}, this.options );
   		extend( this.options, options );
@@ -84,7 +85,7 @@
 		var self = this, toggleFn =  function( ev ) {
 				if( ( ( ev.type.toLowerCase() === 'mouseover' || ev.type.toLowerCase() === 'mouseout' ) && isMouseLeaveOrEnter( ev, this ) ) || ev.type.toLowerCase() === self.clickevent ) {
 					self.toggle(true);
-					self.options.onToggle();	
+					self.options.onToggle();
 				}
 			};
 
@@ -104,15 +105,15 @@
 			var a = this.config.animation[ i ],
 				el = this.svg.select( a.el ),
 				animProp = this.toggled ? a.animProperties.from : a.animProperties.to,
-				val = animProp.val, 
+				val = animProp.val,
 				timeout = motion && animProp.delayFactor ? animProp.delayFactor : 0;
-			
+
 			if( animProp.before ) {
 				el.attr( JSON.parse( animProp.before ) );
 			}
 
 			if( motion ) {
-				setTimeout(function( el, val, animProp ) { 
+				setTimeout(function( el, val, animProp ) {
 					return function() { el.animate( JSON.parse( val ), self.options.speed, self.options.easing, function() {
 						if( animProp.after ) {
 							this.attr( JSON.parse( animProp.after ) );
@@ -120,13 +121,13 @@
 						if( animProp.animAfter ) {
 							this.animate( JSON.parse( animProp.animAfter ), self.options.speed, self.options.easing );
 						}
-					} ); }; 
+					} ); };
 				}( el, val, animProp ), timeout * self.options.speed );
 			}
 			else {
 				el.attr( JSON.parse( val ) );
 			}
-				
+
 		}
 		this.toggled = !this.toggled;
 	};

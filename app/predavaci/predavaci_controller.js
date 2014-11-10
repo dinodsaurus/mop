@@ -7,7 +7,7 @@ angular.module('mop-predavaci',[])
         $scope.gosti = predavaciFac.gosti;
         $scope.select(2);
     })
-    .controller('PredavacCtrl', function ($scope, predavaciFac, $routeParams) {
+    .controller('PredavacCtrl', function ($scope, predavaciFac, $routeParams, $window) {
         $scope.page.title = "Gosti";
         $scope.page.bck = true;
         $scope.select(2);
@@ -20,6 +20,6 @@ angular.module('mop-predavaci',[])
             }
         }
         $scope.bck = function(){
-            $location.path('/predavaci');
+            $window.history.back();
         }
     });

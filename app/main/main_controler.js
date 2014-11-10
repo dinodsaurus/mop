@@ -11,7 +11,7 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
                 templateUrl: 'predavaci/predavaci.html',
                 controller: 'PredavaciCtrl'
             })
-            .when('/gosti/:id/', {
+            .when('/gosti/:id', {
                 templateUrl:'predavaci/gost.html',
                 controller: 'PredavacCtrl'
             })
@@ -19,7 +19,7 @@ angular.module('mop-main',['ngRoute','ngAnimate','mop-predavaci','mop-program','
                 templateUrl: 'program/program.html',
                 controller: 'ProgramCtrl'
             })
-            .when('/program/:id/', {
+            .when('/program/:id', {
                 templateUrl:'program/programSing.html',
                 controller: 'ProgramSingle'
             })
