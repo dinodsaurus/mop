@@ -37,7 +37,7 @@ gulp.task('vendorJS', function(){
         './bower_components/angular/angular.js',
         './bower_components/angular-animate/angular-animate.min.js',
         './bower_components/angular-route/angular-route.min.js',
-        './bower_components/vendor/*.js'])
+        './app/vendor/*.js'])
         .pipe(plugins.concat('lib.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./build'));
@@ -89,4 +89,4 @@ gulp.task('connect', plugins.connect.server({
     livereload: true
 }));
 
-gulp.task('default',['connect','scripts','templates','less','copy','vendorJS','vendorCSS','watch','image']);
+gulp.task('default',['connect','scripts','templates','less','copy','vendorJS','vendorCSS','watch']);
